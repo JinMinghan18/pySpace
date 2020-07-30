@@ -1,0 +1,117 @@
+2020-07-29 19:23:37 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2020-07-29 19:23:37 base.py[line:881] INFO Added job "update" to job store "default"
+2020-07-29 19:23:37 base.py[line:166] INFO Scheduler started
+2020-07-29 19:23:37 sqlalchemy.py[line:143] ERROR Unable to restore job "job_interval" -- removing it
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 141, in _get_jobs
+    jobs.append(self._reconstitute_job(row.job_state))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 125, in _reconstitute_job
+    job_state = pickle.loads(job_state)
+ValueError: unsupported pickle protocol: 5
+2020-07-29 19:23:37 sqlalchemy.py[line:143] ERROR Unable to restore job "job_cron" -- removing it
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 141, in _get_jobs
+    jobs.append(self._reconstitute_job(row.job_state))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 125, in _reconstitute_job
+    job_state = pickle.loads(job_state)
+ValueError: unsupported pickle protocol: 5
+2020-07-29 19:23:40 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:40 CST)" (scheduled at 2020-07-29 19:23:40.486744+08:00)
+2020-07-29 19:23:40 base.py[line:131] ERROR Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:43 CST)" raised an exception
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 756, in __init__
+    restore_signals, start_new_session)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 1155, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "D:\MyStudySpace\pySpace\printtest1\spider.py", line 8, in update
+    service.start()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'msedgedriver.exe' executable needs to be in PATH. Please download from http://go.microsoft.com/fwlink/?LinkId=619687
+
+2020-07-29 19:23:43 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:43 CST)" (scheduled at 2020-07-29 19:23:43.486744+08:00)
+2020-07-29 19:23:43 base.py[line:131] ERROR Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:46 CST)" raised an exception
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 756, in __init__
+    restore_signals, start_new_session)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 1155, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "D:\MyStudySpace\pySpace\printtest1\spider.py", line 8, in update
+    service.start()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'msedgedriver.exe' executable needs to be in PATH. Please download from http://go.microsoft.com/fwlink/?LinkId=619687
+
+2020-07-29 19:23:46 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:46 CST)" (scheduled at 2020-07-29 19:23:46.486744+08:00)
+2020-07-29 19:23:46 base.py[line:131] ERROR Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:49 CST)" raised an exception
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 756, in __init__
+    restore_signals, start_new_session)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 1155, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "D:\MyStudySpace\pySpace\printtest1\spider.py", line 8, in update
+    service.start()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'msedgedriver.exe' executable needs to be in PATH. Please download from http://go.microsoft.com/fwlink/?LinkId=619687
+
+2020-07-29 19:23:49 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:49 CST)" (scheduled at 2020-07-29 19:23:49.486744+08:00)
+2020-07-29 19:23:49 base.py[line:131] ERROR Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:23:52 CST)" raised an exception
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 756, in __init__
+    restore_signals, start_new_session)
+  File "D:\ProgramData\Anaconda3\lib\subprocess.py", line 1155, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "D:\MyStudySpace\pySpace\printtest1\spider.py", line 8, in update
+    service.start()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'msedgedriver.exe' executable needs to be in PATH. Please download from http://go.microsoft.com/fwlink/?LinkId=619687
+
+2020-07-29 19:41:16 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2020-07-29 19:41:16 base.py[line:881] INFO Added job "update" to job store "default"
+2020-07-29 19:41:16 base.py[line:166] INFO Scheduler started
+2020-07-29 19:41:19 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:19 CST)" (scheduled at 2020-07-29 19:41:19.143842+08:00)
+2020-07-29 19:41:22 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:22 CST)" (scheduled at 2020-07-29 19:41:22.143842+08:00)
+2020-07-29 19:41:25 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:25 CST)" (scheduled at 2020-07-29 19:41:25.143842+08:00)
+2020-07-29 19:41:25 base.py[line:144] INFO Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:22 CST)" executed successfully
+2020-07-29 19:41:28 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:28 CST)" (scheduled at 2020-07-29 19:41:28.143842+08:00)
+2020-07-29 19:41:29 base.py[line:144] INFO Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:25 CST)" executed successfully
+2020-07-29 19:41:31 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:31 CST)" (scheduled at 2020-07-29 19:41:31.143842+08:00)
+2020-07-29 19:41:31 base.py[line:144] INFO Job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:28 CST)" executed successfully
+2020-07-29 19:41:34 base.py[line:123] INFO Running job "update (trigger: interval[0:00:03], next run at: 2020-07-29 19:41:34 CST)" (scheduled at 2020-07-29 19:41:34.143842+08:00)
