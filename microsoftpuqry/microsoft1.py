@@ -37,7 +37,7 @@ data = {
     "productIds": [],
     "queryText": "",
     "severityIds": [],
-    "toPublishedDate": "07/30/2020"
+    "toPublishedDate": "08/01/2020"
 }
 
 conn = pymysql.connect(
@@ -49,7 +49,7 @@ conn = pymysql.connect(
 
 cursor = conn.cursor()
 
-for i in range(0,35):
+for i in range(27,35):
     data["pageNumber"] = i + 1
     html = get_HTML(url,json.dumps(data))
     #get data from details
