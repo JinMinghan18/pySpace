@@ -1,4 +1,4 @@
-# Scrapy settings for douban project
+# Scrapy settings for scrapydemo project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'douban'
+BOT_NAME = 'scrapydemo'
 
-SPIDER_MODULES = ['douban.spiders']
-NEWSPIDER_MODULE = 'douban.spiders'
+SPIDER_MODULES = ['scrapydemo.spiders']
+NEWSPIDER_MODULE = 'scrapydemo.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
+#USER_AGENT = 'scrapydemo (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -25,7 +25,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.5
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -45,15 +45,14 @@ DOWNLOAD_DELAY = 0.5
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'douban.middlewares.DoubanSpiderMiddleware': 543,
+#    'scrapydemo.middlewares.ScrapydemoSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'douban.middlewares.my_proxy': 543,
-#
-# }
+#DOWNLOADER_MIDDLEWARES = {
+#    'scrapydemo.middlewares.ScrapydemoDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -63,9 +62,9 @@ DOWNLOAD_DELAY = 0.5
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'douban.pipelines.DoubanPipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'scrapydemo.pipelines.ScrapydemoPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -87,9 +86,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-
-database_host = '127.0.0.1'
-database_port = 3306
-database_name = 'douban'
-database_collection = 'douban_movie_top250'
