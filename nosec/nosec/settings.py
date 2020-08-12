@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = 'nosec.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'nosec (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -50,9 +50,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'nosec.middlewares.NosecDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'nosec.middlewares.NosecSpiderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -62,15 +62,16 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'nosec.pipelines.NosecPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'nosec.pipelines.JsonWithEncodingPipeline': 300,
+   'nosec.pipelines.WebcrawlerScrapyPipeline': 300
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-#AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_START_DELAY = 0.5
 # The maximum download delay to be set in case of high latencies
 #AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
@@ -87,6 +88,12 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+PHANTOMJS_SERVICE_ARGS = []
+SELENIUM_TIMEOUT = 20
+PHANTOMJS_EXECUTABLE_PATH = r"D:\Downloads\phantomjs-2.1.1-windows\bin\phantomjs.exe"
 
-mysql_host = '127.0.0.1'
-mysql_dbname = 'nosec_threat'
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'threat_info'  # 数据库名字，请修改
+MYSQL_USER = 'root'  # 数据库账号，请修改
+MYSQL_PASSWD = '123456'  # 数据库密码，请修改
+MYSQL_PORT = 3306  # 数据库端口，在dbhelper中使用
