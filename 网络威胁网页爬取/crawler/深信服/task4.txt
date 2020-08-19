@@ -1,0 +1,28 @@
+attack_type: "5e0e95e928e29c3b92a6b678"
+vuln_activity_average: 0
+vuln_activity_level: 0
+vuln_cve(CVE ID): "CVE-2019-1182"
+vuln_discover_date(披露时间): "2019-08-13"
+vuln_discover_details: {en: "", cn: ""}
+    cn: ""
+    en: ""
+vuln_exp_doc: {en: "", cn: ""}
+    cn: ""
+    en: ""
+vuln_level(危害等级): "103"
+    ("103" 严重
+    "102" 高危
+    "101" 中危
+    "100" 低危
+    "" 未知)
+vuln_name(漏洞名称): "Remote Desktop Protocol远程代码执行漏洞"
+vuln_poc_doc: {en: "", cn: ""}
+cn: ""
+en: ""
+vuln_sfv: "SF_2020_29472"
+vuln_status(漏洞状态): [0, 0, 0, 0](有披露详情 无PoC 无Exp 无态势图)
+0: 0
+1: 0
+2: 0
+3: 0
+vuln_type_name(攻击类型): "代码注入"
