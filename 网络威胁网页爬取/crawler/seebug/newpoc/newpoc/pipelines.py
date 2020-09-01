@@ -10,7 +10,7 @@ from itemadapter import ItemAdapter
 import pymysql as db
 class NewpocPipeline:
     def __init__(self):
-        self.con = db.connect(user="root", passwd="jin123456", host="39.97.238.64", db="seebug", charset="utf8")
+        self.con = db.connect(user="root", passwd="82a08874c5fc4bb8", host="114.116.250.233", db="seebug", charset="utf8")
         self.cur = self.con.cursor()
         #self.cur.execute('drop table seebug3')
         # self.cur.execute(
