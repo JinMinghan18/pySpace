@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        {% for k,v in user.items() %}
+        <tr>
+            <td>{{k}}</td>            #三种取值方式
+            <td>{{v.name}}</td>
+            <td>{{v['name']}}</td>
+            <td>{{v.get('name')}}</td>
+            <td><a href="/detail/{{k}}">查看详细</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
