@@ -36,7 +36,7 @@ def handwrittingClassify():
         #将每一个文件的1*1024数据存储到traningMat矩阵中
         trainingMat[i, :] = convertImgtoVector('trainingDigits/%s' % (fileName))
     #构建KNN分类器
-    neigh = KNN(n_neighbors =3, algorithm= 'auto', p=3)
+    neigh = KNN(n_neighbors =3, algorithm= 'auto')
     #拟合模型，trainingMat为训练矩阵，hwlabels为对应的标签
     neigh.fit(trainingMat, hwLabels)
     #返回testDigits目录下的文件列表
