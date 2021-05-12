@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/LSTM.iml" filepath="$PROJECT_DIR$/.idea/LSTM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../KNN/ex1/.idea/ex1.iml" filepath="$PROJECT_DIR$/../KNN/ex1/.idea/ex1.iml" />
+    </modules>
+  </component>
+</project>
