@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # plt.plot(df['日期'], df['收盘价'])
     # 数据归一化
     scaler = MinMaxScaler(feature_range=(0, 1))
-    df2 = scaler.fit_transform(np.array(df["涨跌"]).reshape((-1, 1)))
+    df2 = scaler.fit_transform(np.array(df['收盘价', '涨跌']).reshape((-1, 2)))
     # 分割出训练集和测试集(0.9,0.1)
     training_size = int(len(df2) * 0.9)
     test_size = len(df2) - training_size
