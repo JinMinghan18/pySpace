@@ -44,7 +44,7 @@ if __name__ == '__main__':
     # 设置步长
     time_step = 30
     X_train, Y_train = create_dataset(train_data, time_step)
-    print(X_train)
+    # print(X_train)
     X_test, Y_test = create_dataset(test_data, time_step)
     # 将输入转换为[sample,步长,特征值features]
     X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
@@ -62,16 +62,16 @@ if __name__ == '__main__':
     model.add(Activation('tanh'))
     model.compile(loss='mse', optimizer='adam')
     # 训练模型
-    history = model.fit(X_train, Y_train, validation_split=0.33, epochs=50, batch_size=50, verbose=2)
+    history = model.fit(X_train, Y_train, validation_split=0.33, epochs=1, batch_size=500, verbose=2)
     # 预测并确认性能指标
     train_predict = model.predict(X_train)
     test_predict = model.predict(X_test)
-    print(test_predict)
+    # print(test_predict)
 
     # 转换回原始形态
     train_predict = scaler.inverse_transform(train_predict)
     test_predict = scaler.inverse_transform(test_predict)
-    print(type(test_predict))
+    # print(type(test_predict))
     # 计算训练集均方根误差\MAE\R2
     train_RMSE = math.sqrt(mean_squared_error(Y_train, train_predict))
     train_Mae = mean_absolute_error(Y_train, train_predict)
@@ -92,8 +92,8 @@ if __name__ == '__main__':
     # print(test_RMSE)
     # print(train_RMSE)
     # print(test_Mae)
-    print(test_R2)
-    print(train_R2)
+    # print(test_R2)
+    # print(train_R2)
 
     # 作图
     # 绘制训练集曲线
@@ -113,7 +113,6 @@ if __name__ == '__main__':
     # plt.show()
     # plt.savefig("szzs.eps", dpi=600, format='eps')
     x_input = test_data[len(test_data)-look_back:].reshape(1, -1)
-    x_input.shape
     temp_input = list(x_input)
     temp_input = temp_input[0].tolist()
 
@@ -127,7 +126,6 @@ if __name__ == '__main__':
             print("{} day input {}".format(i, x_input))
             x_input = x_input.reshape(1, -1)
             x_input = x_input.reshape((1, n_step, 1))
-
             yhat = model.predict(x_input, verbose=0)
             print("{} day output {}".format(i, yhat))
             temp_input.extend(yhat[0].tolist())
@@ -142,5 +140,5 @@ if __name__ == '__main__':
             # print(len(temp_input))
             lst_output.extend(yhat.tolist())
             i = i + 1
-    print(lst_output)
-    print(scaler.inverse_transform(lst_output))
+    # print(lst_output)
+    # print(scaler.inverse_transform(lst_output))

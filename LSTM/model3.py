@@ -46,46 +46,6 @@ if __name__ == '__main__':
     test_x = test_x.reshape(test_x.shape[0], test_x.shape[1], 1)
     test_y = test_y.reshape((-1, 1))
 
-    # df = pd.read_csv('http://quotes.money.163.com/service/chddata.html?code=0000001&start=19901219&end=&fields=TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;VOTURNOVER;VATURNOVER', encoding='GBK')
-    # data = df['收盘价']
-    # scaler = MinMaxScaler(feature_range=(0, 1))
-    #
-    # train = data[0 : 6000]
-    #
-    # test = data[6000 : ]
-    # seq_len = 30
-    # res = []
-    # for i in range(len(data) - seq_len - 1 + 1):
-    #     res.append(data[i : i+seq_len + 1])
-    # data_min = []
-    # data_max = []
-    # ad_res = []
-    # for i in range(np.array(res).shape[0]):
-    #     datai = res[i]
-    #     datai = datai.reset_index(drop=True)
-    #     data_min.append(min(datai))
-    #     data_max.append(max(datai))
-    #     resi = []
-    #     # for j in range(datai.shape[0]):
-    #     #     resi.append((datai[j] - min(datai)) / (max(datai) - min(datai)))
-    #     #按组归一化处理
-    #     resi = scaler.fit_transform(np.array(datai).reshape((-1, 1)))
-    #     ad_res.append(resi)
-    #
-    # result = np.array(ad_res)
-    # row = result.shape[0] - 100
-    # train = result[:row, :]
-    # np.random.shuffle(train)
-    # train_x = train[:, :-1]
-    # train_y = train[:, -1]
-    # test = result[row:, :]
-    # test_x = test[:, :-1]
-    # test_y = test[:, -1]
-    #
-    # train_x = np.reshape(train_x, (train_x.shape[0], train_x.shape[1], 1))
-    # test_x = np.reshape(test_x, (test_x.shape[0], test_x.shape[1], 1))
-    # print(train_x)
-
     model = Sequential()
 
     model.add(LSTM(60, input_shape=(train_x.shape[1], train_x.shape[2]), return_sequences=True))

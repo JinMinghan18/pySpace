@@ -11,8 +11,6 @@ def get_stock_infos():
     df1 = df.reset_index()[['交易时间', '收盘价', '涨跌']]
 
 
-    # df1 = df1.sort_index(ascending=False)
-
     df1['涨跌'] = df1['涨跌'].astype('float')
     return df1
 
